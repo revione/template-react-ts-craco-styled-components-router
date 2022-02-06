@@ -43,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "@types/styled-components": "^5.1.22",
     "craco-alias": "^3.0.1"
   }
 }

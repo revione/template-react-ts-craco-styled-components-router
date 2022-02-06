@@ -1,7 +1,7 @@
 // libraries
 import { useLocation, useNavigate } from "react-router-dom";
 // components
-import { useAuth } from "..";
+import { useAuth } from "@src/router/_components";
 
 export function LoginPage() {
   let navigate = useNavigate();

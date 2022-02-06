@@ -9,9 +9,9 @@ import {
   incrementIfOdd,
   selectCount,
 } from "@redux/slices";
-import styles from "./Counter.module.css";
+import styles from "./Buttons.module.css";
 
-export function Counter() {
+export function Buttons() {
   const count = useSelector(selectCount);
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState("2");

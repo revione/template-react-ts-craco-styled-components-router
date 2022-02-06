@@ -1,14 +1,17 @@
 import React from "react";
 import logo from "./logo.svg";
-import { Counter as CounterFeature } from "@src/features/counter/Counter";
-import "./App.css";
+import { Buttons } from "./_components";
+import "./Counter.css";
 
 export function Counter() {
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="container-counter">
         <img src={logo} className="App-logo" alt="logo" />
-        <CounterFeature />
+
+        {/* Funcitonality */}
+        <Buttons />
+
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -50,7 +53,7 @@ export function Counter() {
             React Redux
           </a>
         </span>
-      </header>
+      </div>
     </div>
   );
 }

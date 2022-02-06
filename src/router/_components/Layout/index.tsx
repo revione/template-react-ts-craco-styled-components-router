@@ -1,7 +1,8 @@
 // libraries
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 // components
 import { AuthStatus } from "../.";
+import { Link } from "@components";
 
 export function Layout() {
   return (
@@ -10,10 +11,16 @@ export function Layout() {
 
       <ul>
         <li>
-          <Link to="/">Public Page</Link>
+          <Link to="/">Home Page</Link>
         </li>
         <li>
           <Link to="/protected">Protected Page</Link>
+        </li>
+        <li>
+          <Link to="/courses">Courses protected Page</Link>
+        </li>
+        <li>
+          <Link to="/counter">Counter protected Page</Link>
         </li>
       </ul>
 

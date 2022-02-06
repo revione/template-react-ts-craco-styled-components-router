@@ -7,7 +7,40 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1 {
+  margin: 0;
+}
+
+button {
+  color: #444;
+  font-weight: 600;
+  background: #c1f7ff;
+  border-radius: 3px;
+  border: 1px solid #c1f7ff;
+  padding: 7px;
+
+  transition: all 0.25s linear;
+  box-shadow: 0 2px 0px 1px #c8c8c8;
+}
+
+button:hover {
+  background: #c1f7ff;
+  box-shadow: 0 1px 0px 1px #c8c8c8;
+  transform: translateY(1px);
+}
+
+button:active {
+  box-shadow: 0 0px 0px 0px #c8c8c8;
+  transform: translateY(2px);
 }
