@@ -48,6 +48,7 @@ export default function Router() {
                 </RequireAuth>
               }
             />
+            <Route path="*" element={<NoMatch />} />
           </Route>
         </Routes>
       </AuthProvider>
@@ -190,4 +191,15 @@ function PublicPage() {
 
 function ProtectedPage() {
   return <h3>Protected</h3>;
+}
+
+function NoMatch() {
+  return (
+    <div>
+      <h2>Nothing to see here!</h2>
+      <p>
+        <Link to="/">Go to the home page</Link>
+      </p>
+    </div>
+  );
 }
