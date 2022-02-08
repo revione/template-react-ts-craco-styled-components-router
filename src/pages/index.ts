@@ -1,3 +1,4 @@
+// components
 export * from "./Counter";
 export * from "./CoursePage";
 export * from "./CoursesIndexPage";
@@ -6,3 +7,5 @@ export * from "./HomePage";
 export * from "./LoginPage";
 export * from "./NoMatchPage";
 export * from "./ProtectedPage";
+
+// lazys

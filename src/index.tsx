@@ -2,19 +2,24 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
+import { ThemeProvider } from "styled-components";
 // services
 import * as serviceWorker from "./serviceWorker";
 // reudx
 import { store } from "@redux";
 // styles
 import "./index.css";
+import { theme } from "@src/config/theme";
+
 // components
 import Router from "./router";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Router />
+      <ThemeProvider theme={theme}>
+        <Router />
+      </ThemeProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
