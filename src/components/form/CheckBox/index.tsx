@@ -1,7 +1,3 @@
-import React from "react"
+import { CheckBox as BaseCheckBox } from "./styled"
 
-import { BaseCheckBox } from "./styled"
-
-const CheckBox = ({ ...rest }) => <BaseCheckBox {...rest} />
-
-export default CheckBox
+export const CheckBox = ({ ...rest }) => <BaseCheckBox {...rest} />

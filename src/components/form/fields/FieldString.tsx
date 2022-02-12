@@ -3,7 +3,7 @@ import { UseFormReturn } from "react-hook-form"
 // components
 import { Field } from "./Field"
 // utils
-import { formatToString } from "@utils/inputFormat"
+import { formatToString } from "@utils"
 
 interface FieldPros {
   name: string

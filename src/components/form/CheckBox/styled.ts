@@ -1,5 +1,5 @@
 import styled from "styled-components"
 
-export const BaseCheckBox = styled.input`
+export const CheckBox = styled.input`
   transform: scale(1.5);
 `

@@ -1,8 +1,8 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const ToggleContainer = styled.button<{ themeName: string }>`
-  background: ${({ theme }) => theme.colors.gradient};
-  border: 1px solid ${({ theme }) => theme.colors.toggleBorder};
+  background: white;
+  border: 1px solid black;
   border-radius: 30px;
   cursor: pointer;
   display: flex;
@@ -36,4 +36,4 @@ export const ToggleContainer = styled.button<{ themeName: string }>`
         themeName === "light" ? "translateY(-100px)" : "translateY(0)"};
     }
   }
-`
+`;

@@ -1,17 +1,17 @@
 // libraries
-import { useRouter } from "next/router"
+import { useNavigate } from "react-router-dom";
 // components
-import { Text, Button } from "@components"
+import { Text, Button } from "@components";
 // styles
-import { BackContainer, Header as HeaderStyle } from "./styled"
+import { BackContainer, Header as HeaderStyle } from "./styled";
 
 export const Header = () => {
-  const router = useRouter()
+  const navigate = useNavigate();
 
   return (
     <HeaderStyle>
       <BackContainer>
-        <Button text onClick={() => router.back()}>
+        <Button text onClick={() => navigate(-1)}>
           <img src="/icons/arrow-left.svg" alt="" />
 
           <Text size={14} weight={600} color="#163637" cursor="pointer">
@@ -24,5 +24,5 @@ export const Header = () => {
         Install Tandym on your website
       </Text>
     </HeaderStyle>
-  )
-}
+  );
+};

@@ -1,21 +1,21 @@
 //libraries
-import { useRouter } from "next/router"
+import { useLocation } from "react-router-dom";
 // components
-import { Margin, Text, Flex } from "@components"
+import { Margin, Text, Flex } from "@components";
 // styles
-import { Circle } from "./styled"
+import { Circle } from "./styled";
 
 interface Props {
-  id: string
-  text: string
-  url: string
-  isReady: boolean
-  isLastOne: boolean
+  id: string;
+  text: string;
+  url: string;
+  isReady: boolean;
+  isLastOne: boolean;
 }
 
 export const Step = ({ id, text, url, isReady, isLastOne = false }: Props) => {
-  const router = useRouter()
-  const isActualStep = !router.asPath.search(url)
+  const location = useLocation();
+  const isActualStep = !location.pathname.search(url);
 
   return (
     <>
@@ -45,5 +45,5 @@ export const Step = ({ id, text, url, isReady, isLastOne = false }: Props) => {
           <Flex alignItems="baseline">______</Flex>
         ))}
     </>
-  )
-}
+  );
+};

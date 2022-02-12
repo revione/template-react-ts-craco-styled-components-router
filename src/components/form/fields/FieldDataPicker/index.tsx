@@ -1,7 +1,6 @@
 // libraries
 import { useEffect, useState } from "react"
 import { Controller, UseFormReturn } from "react-hook-form"
-import {} from "react-hook-form"
 // components
 import { Flex, Text } from "@components"
 // styles
@@ -38,7 +37,7 @@ const DataPickerField = ({
       setIsActive(String(value[name]).length > 0)
     })
     return () => subscription.unsubscribe()
-  }, [watch])
+  }, [name, watch])
 
   return (
     <Flex direction="column" gap={8}>

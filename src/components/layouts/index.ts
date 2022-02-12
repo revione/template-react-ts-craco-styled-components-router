@@ -1,2 +1,1 @@
-export * from "./SettingsLayout"
-export * from "./InstallLayout"
+export * from "./InstallLayout";
