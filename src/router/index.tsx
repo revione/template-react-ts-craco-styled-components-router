@@ -1,8 +1,8 @@
 // libraries
-import { BrowserRouter, useRoutes } from "react-router-dom";
-import type { RouteObject } from "react-router-dom";
+import { BrowserRouter, useRoutes } from "react-router-dom"
+import type { RouteObject } from "react-router-dom"
 // components
-import { AuthProvider, Layout, RequireAuth } from "./_components";
+import { AuthProvider, Layout, RequireAuth } from "./_components"
 // pages
 import {
   Counter,
@@ -13,14 +13,19 @@ import {
   CoursePage,
   CoursesIndexPage,
   CoursesPage,
-} from "@src/pages";
+  SuperClicks,
+} from "@src/pages"
 
 const routes: RouteObject[] = [
   {
     path: "/",
-    element: <Layout />,
+    element: <Layout />, // here is the layout for all
     children: [
       { index: true, element: <HomePage /> },
+      {
+        path: "/super-clicks",
+        element: <SuperClicks />,
+      },
       {
         path: "/login",
         element: <LoginPage />,
@@ -56,10 +61,10 @@ const routes: RouteObject[] = [
       { path: "*", element: <NoMatchPage /> },
     ],
   },
-];
+]
 
 function Routes() {
-  return useRoutes(routes);
+  return useRoutes(routes)
 }
 
 export default function Router() {
@@ -71,5 +76,5 @@ export default function Router() {
         <Routes />
       </AuthProvider>
     </BrowserRouter>
-  );
+  )
 }

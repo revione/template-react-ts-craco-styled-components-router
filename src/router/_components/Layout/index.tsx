@@ -1,8 +1,8 @@
 // libraries
-import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom"
 // components
-import { AuthStatus } from "../.";
-import { Link } from "@components";
+import { AuthStatus } from "../."
+import { Link } from "@components"
 
 export function Layout() {
   return (
@@ -12,6 +12,9 @@ export function Layout() {
       <ul>
         <li>
           <Link to="/">Home Page</Link>
+        </li>
+        <li>
+          <Link to="/super-clicks">Super Clicks</Link>
         </li>
         <li>
           <Link to="/protected">Protected Page</Link>
@@ -26,5 +29,5 @@ export function Layout() {
 
       <Outlet />
     </div>
-  );
+  )
 }
