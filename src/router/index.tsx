@@ -16,10 +16,10 @@ import {
   SuperClicks,
 } from "@src/pages"
 
-const routes: RouteObject[] = [
+const routes = [
   {
     path: "/",
-    element: <Layout />, // here is the layout for all
+    // element: <Layout />, // here is the layout for all
     children: [
       { index: true, element: <HomePage /> },
       {
@@ -71,7 +71,7 @@ export default function Router() {
   return (
     <BrowserRouter>
       <AuthProvider>
-        <h1>Router</h1>
+        {/* <h1>Router</h1> */}
 
         <Routes />
       </AuthProvider>

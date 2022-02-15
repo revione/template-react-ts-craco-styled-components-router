@@ -155,6 +155,7 @@ export const SuperClicks = () => {
       />
 
       <div>
+        <button onClick={() => setCantidad(0)}>0</button>
         <button onClick={() => setCantidad(1)}>1</button>
         <button onClick={() => setCantidad(5)}>5</button>
         <button onClick={() => setCantidad(10)}>10</button>
@@ -162,6 +163,18 @@ export const SuperClicks = () => {
         <button onClick={() => setCantidad(20)}>20</button>
         <button onClick={() => setCantidad(25)}>25</button>
         <button onClick={() => setCantidad(30)}>30</button>
+        <button onClick={() => setCantidad(60)}>60</button>
+        <button onClick={() => setCantidad(100)}>100</button>
+        <button onClick={() => setCantidad(125)}>125</button>
+        <button onClick={() => setCantidad(150)}>150</button>
+        <button onClick={() => setCantidad(200)}>200</button>
+        <button onClick={() => setCantidad(500)}>500</button>
+
+        <button onClick={() => setCantidad(600)}>600</button>
+
+        <button onClick={() => setCantidad(700)}>700</button>
+
+        <button onClick={() => setCantidad(800)}>800</button>
       </div>
 
       <h1>Count: {count}</h1>

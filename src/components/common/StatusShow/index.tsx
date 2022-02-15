@@ -52,18 +52,6 @@ export const StatusShowRendered = ({
     }
   }, [isSuccess, isError])
 
-  console.log("isLoading : ", isLoading)
-
-  // the component
-  // const component = active ? (
-  //   <StatusShowStyle>
-  //     <ContentStatus {...{ isLoading }}>
-  //       {isSuccess && <img src="/icons/success.svg" alt="success" />}
-  //       {isError && <img src="/icons/error.svg" alt="error" />}
-  //     </ContentStatus>
-  //   </StatusShowStyle>
-  // ) : null
-
   const component = (
     <Transition trigger={active}>
       <StatusShowStyle>
