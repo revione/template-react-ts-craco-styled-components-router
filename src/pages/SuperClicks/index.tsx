@@ -108,20 +108,9 @@ export const SuperClicks = () => {
       {runClicks()}
 
       <div>
-        <button onClick={() => handleSetDelay(10)}>Start</button>
-        <button onClick={handleStop}>Stop</button>
-        <button onClick={() => handleSetDelay(5)}>5</button>
-        <button onClick={() => handleSetDelay(10)}>10</button>
-        <button onClick={() => handleSetDelay(20)}>20</button>
-        <button onClick={() => handleSetDelay(30)}>30</button>
-        <button onClick={() => handleSetDelay(40)}>40</button>
-        <button onClick={() => handleSetDelay(50)}>50</button>
-
         <button onClick={() => handleSetDelay(100)}>100</button>
 
         <button onClick={() => handleSetDelay(200)}>200</button>
-
-        <button onClick={() => handleSetDelay(300)}>300</button>
 
         <button onClick={() => handleSetDelay(400)}>400</button>
 
@@ -134,6 +123,7 @@ export const SuperClicks = () => {
         <button onClick={() => handleSetDelay(800)}>800</button>
 
         <button onClick={() => handleSetDelay(900)}>900</button>
+
         <button onClick={() => handleSetDelay(1000)}>1000</button>
         <button onClick={() => handleSetDelay(1250)}>1250</button>
         <button onClick={() => handleSetDelay(1500)}>1500</button>
@@ -156,9 +146,6 @@ export const SuperClicks = () => {
 
       <div>
         <button onClick={() => setCantidad(0)}>0</button>
-        <button onClick={() => setCantidad(100)}>100</button>
-        <button onClick={() => setCantidad(200)}>200</button>
-        <button onClick={() => setCantidad(300)}>300</button>
         <button onClick={() => setCantidad(400)}>400</button>
         <button onClick={() => setCantidad(500)}>500</button>
         <button onClick={() => setCantidad(600)}>600</button>
