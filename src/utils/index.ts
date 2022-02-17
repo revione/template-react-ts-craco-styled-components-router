@@ -17,3 +17,11 @@ export const isEmpty = (obj: any) => {
 
 //  check developm variable
 export const isDevelopment = Boolean(process.env.NODE_ENV === "development")
+
+// Copy a text
+export const copy = (text: string) => navigator.clipboard.writeText(text)
+
+// Copy a object as setring
+export const copyObjectAsString = (obj: any) => {
+  navigator.clipboard.writeText(JSON.stringify(obj, null, 2))
+}

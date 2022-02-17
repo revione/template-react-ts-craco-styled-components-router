@@ -19,7 +19,7 @@ import {
 const routes = [
   {
     path: "/",
-    // element: <Layout />, // here is the layout for all
+    element: <Layout />, // here is the layout for all
     children: [
       { index: true, element: <HomePage /> },
       {
