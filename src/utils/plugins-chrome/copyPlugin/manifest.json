@@ -1,0 +1,27 @@
+{
+  "name": "Copy texts ponds",
+  "description": "Copy texts ponds",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_title": "Copy the text",
+    "default_icon": {
+      "16": "/images/reader16.png",
+      "24": "/images/reader24.png",
+      "32": "/images/reader32.png",
+      "48": "/images/reader48.png",
+      "128": "/images/reader128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/reader16.png",
+    "24": "/images/reader24.png",
+    "32": "/images/reader32.png",
+    "48": "/images/reader48.png",
+    "128": "/images/reader128.png"
+  }
+}
