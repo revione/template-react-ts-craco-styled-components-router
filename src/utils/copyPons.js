@@ -10,15 +10,26 @@ const zusamen = [...translations, ...examples]
 
 let texts = []
 
+function capitalize(word) {
+  return word[0].toUpperCase() + word.slice(1).toLowerCase()
+}
+
+const newWord = (word) => {
+  let internalWord = word
+  if (internalWord === "etw") internalWord = "etwas"
+  return internalWord
+}
+
 // recorrer los a elements
 const getText = (as) => {
   let textDl = ""
 
   as.forEach((a, index, array) => {
-    if (index === 0 && array.length === 1) textDl += `${a.text}.`
-    else if (index === 0) textDl += `${a.text} `
-    else if (index + 1 === array.length) textDl += `${a.text}.`
-    else textDl += `${a.text} `
+    const word = newWord(a.text)
+    if (index === 0 && array.length === 1) textDl += `${capitalize(word)}.`
+    else if (index === 0) textDl += `${capitalize(word)} `
+    else if (index + 1 === array.length) textDl += `${word}.`
+    else textDl += `${word} `
   })
 
   return textDl
