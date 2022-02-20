@@ -1,6 +1,5 @@
 // libraries
 import { BrowserRouter, useRoutes } from "react-router-dom"
-import type { RouteObject } from "react-router-dom"
 // components
 import { AuthProvider, Layout, RequireAuth } from "./_components"
 // pages
@@ -14,6 +13,7 @@ import {
   CoursesIndexPage,
   CoursesPage,
   SuperClicks,
+  Verbs,
 } from "@src/pages"
 
 const routes = [
@@ -25,6 +25,10 @@ const routes = [
       {
         path: "/super-clicks",
         element: <SuperClicks />,
+      },
+      {
+        path: "/verbs",
+        element: <Verbs />,
       },
       {
         path: "/login",

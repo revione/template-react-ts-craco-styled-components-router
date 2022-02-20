@@ -25,6 +25,9 @@ export function Layout() {
         <li>
           <Link to="/counter">Counter protected Page</Link>
         </li>
+        <li>
+          <Link to="/verbs">Verbs</Link>
+        </li>
       </ul>
 
       <Outlet />

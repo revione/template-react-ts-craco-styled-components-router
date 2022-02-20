@@ -8,5 +8,6 @@ export * from "./LoginPage"
 export * from "./NoMatchPage"
 export * from "./ProtectedPage"
 export * from "./SuperClicks"
+export * from "./Verbs"
 
 // lazys
