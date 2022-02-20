@@ -14,6 +14,7 @@ import {
   CoursesPage,
   SuperClicks,
   Verbs,
+  IntegrateTexts,
 } from "@src/pages"
 
 const routes = [
@@ -29,6 +30,10 @@ const routes = [
       {
         path: "/verbs",
         element: <Verbs />,
+      },
+      {
+        path: "/integrate-texts",
+        element: <IntegrateTexts />,
       },
       {
         path: "/login",

@@ -1,17 +1,6 @@
 import React from "react"
 import { useForm } from "react-hook-form"
-import { useState } from "react"
 import { copy } from "@utils"
-
-// texts
-const initialTexts = {
-  infinitiv: "",
-  prasens: "",
-  prateritum: "",
-  perfekt: "",
-  traductionInglish: "",
-  traductionSpanish: "",
-}
 
 const makeArray = (text: string) => {
   return text.replace(/(\r\n|\n|\r)/gm, "").split(".")
@@ -44,12 +33,12 @@ export const Verbs = () => {
   const {
     register,
     getValues,
-    handleSubmit,
+    // handleSubmit,
     // watch,
-    formState: { errors, isValid },
+    // formState: { errors, isValid },
   } = useForm()
 
-  const onSubmit = (data: any) => console.log(data)
+  // const onSubmit = (data: any) => console.log(data)
 
   //   console.log("example", watch("example")) // watch input value by passing the name of it
   //   console.log("infinitiv", watch("infinitiv")) // watch input value by passing the name of it
@@ -68,7 +57,8 @@ export const Verbs = () => {
     // console.log("newValues : ", Object.values(newValues))
 
     const makeOneText = ([arr1, arr2, arr3, arr4]: any) => {
-      console.log("data : ", [arr1, arr2, arr3, arr4])
+      // console.log("data : ", [arr1, arr2, arr3, arr4])
+
       let draft = ""
 
       for (let i = 0; i < arr1.length - 1; i++) {
@@ -111,7 +101,7 @@ export const Verbs = () => {
     const traductions = makeArray(traduction)
 
     const makeOneText = ([arr1, arr2]: any) => {
-      console.log("data : ", [arr1, arr2])
+      // console.log("data : ", [arr1, arr2])
       let draft = ""
 
       for (let i = 0; i < arr1.length - 1; i++) {
@@ -154,66 +144,67 @@ export const Verbs = () => {
       spanishTraduction
 
     copy(draft)
+
+    console.log(draft)
   }
 
   return (
     <div>
       <div>Make a text for verbs</div>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div
-          style={{
-            display: "flex",
-          }}
-        >
-          <div>
-            <TextArea {...{ name: "infinitive", register }} />
-            <TextArea {...{ name: "present", register }} />
-            <TextArea {...{ name: "preterite", register }} />
-            <TextArea {...{ name: "perfect", register }} />
-          </div>
 
-          <div>
-            <TextArea {...{ name: "traductionEnglish", register }} />
-            <TextArea {...{ name: "traductionSpanish", register }} />
-          </div>
-
-          <div>
-            <TextArea {...{ name: "reader", register }} />
-          </div>
+      <div
+        style={{
+          display: "flex",
+        }}
+      >
+        <div>
+          <TextArea {...{ name: "infinitive", register }} />
+          <TextArea {...{ name: "present", register }} />
+          <TextArea {...{ name: "preterite", register }} />
+          <TextArea {...{ name: "perfect", register }} />
         </div>
 
         <div>
-          <button {...{ type: "button", onClick: makeText }}>
-            Make the text
-          </button>
-
-          <button
-            {...{
-              type: "button",
-              onClick: () => {
-                joinTraduction("English")
-              },
-            }}
-          >
-            Copy traduction Englisch
-          </button>
-
-          <button
-            {...{
-              type: "button",
-              onClick: () => {
-                joinTraduction("Spanish")
-              },
-            }}
-          >
-            Copy traduction Spanich
-          </button>
-
-          <button {...{ type: "button", onClick: makeAllTheTexts }}>
-            Copy for document
-          </button>
+          <TextArea {...{ name: "traductionEnglish", register }} />
+          <TextArea {...{ name: "traductionSpanish", register }} />
         </div>
-      </form>
+
+        <div>
+          <TextArea {...{ name: "reader", register }} />
+        </div>
+      </div>
+
+      <div>
+        <button {...{ type: "button", onClick: makeText }}>
+          Make the text
+        </button>
+
+        <button
+          {...{
+            type: "button",
+            onClick: () => {
+              joinTraduction("English")
+            },
+          }}
+        >
+          Copy traduction Englisch
+        </button>
+
+        <button
+          {...{
+            type: "button",
+            onClick: () => {
+              joinTraduction("Spanish")
+            },
+          }}
+        >
+          Copy traduction Spanich
+        </button>
+
+        <button {...{ type: "button", onClick: makeAllTheTexts }}>
+          Copy for document
+        </button>
+      </div>
     </div>
   )
 }

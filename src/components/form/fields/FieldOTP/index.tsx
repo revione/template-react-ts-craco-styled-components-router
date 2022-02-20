@@ -16,7 +16,7 @@ const FieldPhone = (props: FieldPros) => {
   }
 
   const handleKeyDown = (e: any) => {
-    onKeyDown
+    // onKeyDown && onKeyDown()
     return enforceFormat(e)
   }
 
@@ -28,7 +28,7 @@ const FieldPhone = (props: FieldPros) => {
       {...props}
       onChange={handleChange}
       validation={validation}
-      type= 'text'
+      type="text"
       inputMode="numeric"
     />
   )

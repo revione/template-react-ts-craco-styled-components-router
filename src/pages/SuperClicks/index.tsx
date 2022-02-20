@@ -86,11 +86,6 @@ export const SuperClicks = () => {
     setDelay(getRndInteger(100, 1000))
   }
 
-  function handleStop() {
-    setStop(true)
-    setStop(false)
-  }
-
   console.log("delay ", delay)
 
   const runClicks = useCallback(() => {

@@ -37,11 +37,11 @@ export const FieldSsn = ({
       if (value[name]) setIsActive(value[name].length > 0)
     })
     return () => subscription.unsubscribe()
-  }, [watch])
+  }, [name, watch])
 
   useEffect(() => {
     if (placeholder) setIsActive(true)
-  })
+  }, [placeholder])
 
   const validation = {
     required: "phone number is required",

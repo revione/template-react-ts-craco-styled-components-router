@@ -17,6 +17,12 @@ export function Layout() {
           <Link to="/super-clicks">Super Clicks</Link>
         </li>
         <li>
+          <Link to="/verbs">Verbs</Link>
+        </li>
+        <li>
+          <Link to="/integrate-texts">Integrate texts</Link>
+        </li>
+        <li>
           <Link to="/protected">Protected Page</Link>
         </li>
         <li>
@@ -24,9 +30,6 @@ export function Layout() {
         </li>
         <li>
           <Link to="/counter">Counter protected Page</Link>
-        </li>
-        <li>
-          <Link to="/verbs">Verbs</Link>
         </li>
       </ul>
 
