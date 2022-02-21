@@ -3,7 +3,11 @@ import { useForm } from "react-hook-form"
 import { copy } from "@utils"
 
 const makeArray = (text: string) => {
-  return text.replace(/(\r\n|\n|\r)/gm, "").split(".")
+  return text.replace(/(\r\n|\n|\r)/gm, "").split(/[.?!]+/)
+}
+
+const splitNewLine = (text: string) => {
+  return text.replace(/(\f)/gm, "").split(/[\r\n]+/)
 }
 
 const makeOneText = ([arr1, arr2]: any) => {
@@ -35,6 +39,9 @@ const TextArea = React.memo(({ name, register, cols = 50, rows = 10 }: any) => {
       </label>
       <div>
         <textarea
+          style={{
+            padding: 8,
+          }}
           {...{
             ...register(name),
             cols,
@@ -49,17 +56,25 @@ const TextArea = React.memo(({ name, register, cols = 50, rows = 10 }: any) => {
 export const IntegrateTexts = () => {
   const { register, getValues, setValue } = useForm()
 
+  const copyTextFiltered = () => {
+    const { original } = getValues()
+
+    const draft = splitNewLine(original).join("\n\n")
+
+    setValue("text", draft)
+
+    copy(draft)
+  }
+
   const makeText = () => {
     const { original, traduction } = getValues()
 
     const newValues = {
-      infinitive: makeArray(original),
-      present: makeArray(traduction),
+      original: splitNewLine(original),
+      traduction: splitNewLine(traduction),
     }
 
     const newText = makeOneText(Object.values(newValues))
-
-    console.log(newText)
 
     copy(newText)
 
@@ -88,6 +103,9 @@ export const IntegrateTexts = () => {
       </div>
 
       <div>
+        <button {...{ type: "button", onClick: copyTextFiltered }}>
+          Copy text filtered
+        </button>
         <button {...{ type: "button", onClick: makeText }}>Make text</button>
       </div>
     </div>
