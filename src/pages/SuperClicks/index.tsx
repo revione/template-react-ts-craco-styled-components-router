@@ -41,7 +41,7 @@ const TheClicks = ({ clicks, delay, stop }: any) => {
 export const SuperClicks = () => {
   const [delay, setDelay] = useState(1000)
   const [count, setCount] = useState(0)
-  const [stop, setStop] = useState(false)
+  const [stop] = useState(false)
   const [cantidad, setCantidad] = useState(5)
 
   const divRef1 = useRef<HTMLDivElement>(null)

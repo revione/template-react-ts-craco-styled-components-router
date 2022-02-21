@@ -4,7 +4,7 @@ import { Field, FieldPros } from "../Field"
 import { enforceFormat, formatToCode } from "@utils/inputFormat"
 
 const FieldPhone = (props: FieldPros) => {
-  const { name, form, onChange, onKeyDown } = props
+  const { name, form, onChange } = props
 
   const validation = {
     required: "",
@@ -16,7 +16,6 @@ const FieldPhone = (props: FieldPros) => {
   }
 
   const handleKeyDown = (e: any) => {
-    // onKeyDown && onKeyDown()
     return enforceFormat(e)
   }
 

@@ -28,7 +28,7 @@ export const StatusShowRendered = ({
     return () => {
       container && container.remove()
     }
-  }, [])
+  }, [container])
 
   // disable body scroll
   useEffect(() => {

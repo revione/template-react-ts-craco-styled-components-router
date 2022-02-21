@@ -20,7 +20,16 @@ export interface FieldPros {
   align?: "center" | "left" | "right"
   onChange?: (e: any) => void
   onKeyDown?: (e: any) => void
-  inputMode?: "text" | "search" | "email" | "tel" | "url" | "none" | "numeric" | "decimal" | undefined
+  inputMode?:
+    | "text"
+    | "search"
+    | "email"
+    | "tel"
+    | "url"
+    | "none"
+    | "numeric"
+    | "decimal"
+    | undefined
 }
 
 export const Field = ({
@@ -31,8 +40,8 @@ export const Field = ({
   required,
   onChange,
   onKeyDown,
-  type = 'text',
-  inputMode = 'text',
+  type = "text",
+  inputMode = "text",
   ...rest
 }: FieldPros) => {
   const {
@@ -53,10 +62,10 @@ export const Field = ({
       (value: any) => value[name] && setIsActive(value[name].length > 0)
     )
     return () => subscription.unsubscribe()
-  }, [watch])
+  }, [name, watch])
 
   return (
-    <Flex direction="column" gap={8} style={{width:'100%'}}>
+    <Flex direction="column" gap={8} style={{ width: "100%" }}>
       <Container>
         <Input
           isBasic={!label}

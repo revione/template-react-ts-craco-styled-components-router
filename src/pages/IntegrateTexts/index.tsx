@@ -2,9 +2,9 @@ import React from "react"
 import { useForm } from "react-hook-form"
 import { copy } from "@utils"
 
-const makeArray = (text: string) => {
-  return text.replace(/(\r\n|\n|\r)/gm, "").split(/[.?!]+/)
-}
+// const makeArray = (text: string) => {
+//   return text.replace(/(\r\n|\n|\r)/gm, "").split(/[.?!]+/)
+// }
 
 const splitNewLine = (text: string) => {
   return text.replace(/(\f)/gm, "").split(/[\r\n]+/)
